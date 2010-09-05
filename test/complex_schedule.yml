@@ -1,0 +1,36 @@
+-
+  !ruby/sym task: A
+  !ruby/sym time: 3
+  !ruby/sym resources: 1
+-
+  !ruby/sym task: B
+  !ruby/sym time: 2
+  !ruby/sym resources: 2
+-
+  !ruby/sym task: C
+  !ruby/sym time: 1
+  !ruby/sym resources: 3
+-
+  !ruby/sym task: D
+  !ruby/sym time: 4
+  !ruby/sym resources: 2
+-
+  !ruby/sym task: E
+  !ruby/sym time: 1
+  !ruby/sym resources: 2
+-
+  !ruby/sym task: F
+  !ruby/sym time: 3
+  !ruby/sym resources: 1
+-
+  !ruby/sym task: G
+  !ruby/sym time: 5
+  !ruby/sym resources: 2
+-
+  !ruby/sym task: H
+  !ruby/sym time: 2
+  !ruby/sym resources: 1
+-
+  !ruby/sym task: I
+  !ruby/sym time: 1
+  !ruby/sym resources: 3

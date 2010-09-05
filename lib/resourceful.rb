@@ -12,9 +12,11 @@ class Resourceful
     @resources = resources
   end
 
-  def least_worked(time=0)
-    res = @resources.min { |a,b| a[:time_worked] <=> b[:time_worked] }
+  def least_worked(task="", time=0)
+    valid_resources = @resources.find_all{ |res| res[:last_worked] != task }
+    res = valid_resources.min { |a,b| a[:time_worked] <=> b[:time_worked] }
     res[:time_worked] += time
+    res[:last_worked] = task
     res[:name]
   end
 
@@ -26,7 +28,7 @@ class Resourceful
         next
       else
         workers = []
-        task[:resources].times { workers << least_worked(task[:time]) }
+        task[:resources].times { workers << least_worked(task[:task], task[:time]) }
         result_work_schedule << { :task => task[:task], :resources => workers }
       end
     end
