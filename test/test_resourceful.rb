@@ -42,17 +42,17 @@ class ResourcefulTest < Test::Unit::TestCase
     @populated_rful = Resourceful.new(@schedule, @resources)
   end
 
-  def test_must_parse_resource_hash_data
+  def test_accept_resource_hash_data
     @rful.resources = @resources
     assert_equal @resources, @rful.resources
   end
 
-  def test_must_parse_schedule_hash_data
+  def test_accept_schedule_hash_data
     @rful.schedule = @schedule
     assert_equal @schedule, @rful.schedule
   end
 
-  def test_must_parse_schedule_and_resource_hash_data_on_creation
+  def test_accept_schedule_and_resource_hash_data_on_creation
     assert_nothing_raised { rful = Resourceful.new(@schedule, @resources) }
   end
 
