@@ -22,6 +22,10 @@ class Resourceful
 
   def do_scheduling
     result_work_schedule = []
+
+    # Sort tasks from most hours required to least hours required
+    @schedule.sort! { |a,b| b[:time] <=> a[:time] }
+
     @schedule.each do |task|
       if task[:resources] > @resources.length
         result_work_schedule << { :task => task[:task], :resources => [E_NOT_ENOUGH_RESOURCES] }
