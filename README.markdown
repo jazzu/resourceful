@@ -1,4 +1,5 @@
-= Resourceful
+Resourceful
+===========
 
 Resourceful is a tool to solve for even task distribution between a bunch of tasks and workers automatically. It does this by taking a list of tasks requiring certain amount of workers over a certain time, and a list of available workers, and then goes through the two as follows:
 
@@ -9,7 +10,15 @@ Resourceful is a tool to solve for even task distribution between a bunch of tas
 5. Add the found worker to a result table, under the current task
 6. If the task requires more workers, go to 3, otherwise go to 2. Repeat until the whole task list is processed
 
-== Example
+Usage
+-----
+
+Instantiate class with your task and resource arrays, and tell it to do scheduling. This results in an array that has tasks in their original order, compared by task name. If there are not enough resources (ie. task requires more workers than are available in the resource array), a `NotEnoughResourcesError` will be raised with the task name, resouces required, and resources available embedded.
+
+Notice, that if you have identical task names, resulting task order may not be identical to the original task list.
+
+Example
+-------
 
 When not busy eavesdropping each other and encrypting messages, Alice, Bob, and Eve are avid voluntary workers for a non-profit event organization. These weekend-long events have a lot of things to do, and the event managers have decided to automate their work schedule generation. For a certain Saturday they have the following tasks to be done:
 
@@ -35,10 +44,3 @@ which gives out the following work schedule
 
 Unfortunately, Alice ends up with five hours of work, while Bob and Eve have only three hours to worry about. With longer task lists this will be less of an issue, of course.
 
-More examples in the form of tests are in the `test` directory.
-
-== Usage
-
-Instantiate class with your task and resource arrays, and tell it to do scheduling. This results in an array that has tasks in their original order, compared by task name. If there are not enough resources (ie. task requires more workers than are available in the resource array), a `NotEnoughResourcesError` will be raised with the task name, resouces required, and resources available embedded.
-
-Notice, that if you have identical task names, resulting task order may not be identical to the original task list.

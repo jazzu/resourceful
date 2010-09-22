@@ -38,6 +38,7 @@ module Resourceful
           workers = []
           task[:resources].times { workers << least_worked(task[:task], task[:time]) }
           workers.sort!
+
           result_work_schedule[original_position(task[:task])] = { :task => task[:task], :resources => workers }
         end
       end
