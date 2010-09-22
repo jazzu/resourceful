@@ -43,4 +43,3 @@ which gives out the following work schedule
      { :task => "Tour of the venue", :resources => ["Alice"] }]
 
 Unfortunately, Alice ends up with five hours of work, while Bob and Eve have only three hours to worry about. With longer task lists this will be less of an issue, of course.
-
