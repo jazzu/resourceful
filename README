@@ -1,3 +1,0 @@
-= Example
-
-You have three sequential tasks, A, B, and C, which require one, two, and three workers, and take three, two, and one hours to complete, respectively. You also have three workers (X, Y, and Z) which you want to rotate to even out the total workload. The solver would then output assignments A:X, B:YZ, and C:XYZ.
