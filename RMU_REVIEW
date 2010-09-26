@@ -1,0 +1,36 @@
+# Resourceful - Give people stuff to do as evenly as possible
+
+## Setup for review
+
+Require `resourceful`, prepare task array of hashes (`:task_name`, `:hours`,
+`:resources_required`) and resource array of hashes (`:name`). Instantiate with
+arrays, call `do_scheduling` and enjoy the results.
+
+## Summary of Accomplishments
+
+Not sure if you meant this, but here's a list of stuff I have concrete proof of.
+
+During this September session, I worked on five projects, and returned four of
+them: s1-e1 (METARWeather Twitterbot, https://github.com/jazzu/s1-e1), s1-e3
+(http://github.com/sandal/guides/wiki/STDLIB:-OptionParser), personal project
+Resourceful (you're looking at it) and final exam project `RMU::Table`
+(https://github.com/rmu/s1-exam-jazzu/tree/rmu_review).
+
+With this project I managed to get a real good start on a pretty theoretical and
+hairy problem of how to deal work in the form of discrete tasks between workers
+in a most even way. I managed to get the basic algorithm working pretty well,
+and as long as there's enough tasks with variety in requirements to do, it will
+do a decent job in giving roughly equal amounts of work to the workers.
+
+It almost took into account different difficulty/preferrability weights for the
+tasks, but since I couldn't get it work reliably, I dropped it from this review.
+
+## Bugs, missing features, etc - or "Caveat emptor!"
+
+There are no bugs that I know of. To me, most critical missing features would be
+task weighing and non-continuous task handling (ie. do something for
+half-an-hour, wait fifteen minutes, do something for an hour and only after that
+get some longer continuous block of time off).
+
+Considering you, the reviewer, there's nothing special to be aware of. Please,
+do try to break it so I can make it better :-)
